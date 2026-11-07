@@ -1,0 +1,6 @@
+{
+  "name": "Vyoma Interiors",
+  "description": "Interior finishing studio based in Patna. POP, flooring, custom woodwork, wall painting, and structured project execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

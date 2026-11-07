@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #121212;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+:root {
+  --vyoma-green: #07745D;
+  --vyoma-gold: #B88917;
+  --vyoma-dark: #121212;
+}
+
+.bg-vyoma-green { background-color: var(--vyoma-green); }
+.text-vyoma-green { color: var(--vyoma-green); }
+.border-vyoma-green { border-color: var(--vyoma-green); }
+
+.bg-vyoma-gold { background-color: var(--vyoma-gold); }
+.text-vyoma-gold { color: var(--vyoma-gold); }
+.border-vyoma-gold { border-color: var(--vyoma-gold); }
+
