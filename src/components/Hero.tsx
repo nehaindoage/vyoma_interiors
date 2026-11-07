@@ -111,9 +111,9 @@ export const Hero: React.FC<HeroProps> = ({ onDiscussProjectClick, onViewService
               
               {/* Slide Caption */}
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="text-[10px] tracking-wider uppercase px-2 py-0.5 bg-[#B88917] rounded font-semibold">
+                {/* <span className="text-[10px] tracking-wider uppercase px-2 py-0.5 bg-[#B88917] rounded font-semibold">
                   Slide {currentSlide + 1} of {HERO_SLIDES.length}
-                </span>
+                </span> */}
                 <h3 className="text-xl sm:text-2xl font-editorial font-bold mt-1">
                   {HERO_SLIDES[currentSlide].title}
                 </h3>
@@ -123,25 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onDiscussProjectClick, onViewService
               </div>
 
               {/* Slider Controls */}
-              <div className="absolute top-4 right-4 flex items-center gap-1.5 bg-black/40 backdrop-blur-md p-1 rounded-lg">
-                <button
-                  onClick={prevSlide}
-                  className="p-2 text-white hover:bg-white/20 rounded transition-colors"
-                  aria-label="Previous slide"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <span className="text-xs text-white font-medium px-1">
-                  {currentSlide + 1}/{HERO_SLIDES.length}
-                </span>
-                <button
-                  onClick={nextSlide}
-                  className="p-2 text-white hover:bg-white/20 rounded transition-colors"
-                  aria-label="Next slide"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
+              
             </div>
 
             {/* Dots */}

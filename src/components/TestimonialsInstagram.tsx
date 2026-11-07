@@ -66,7 +66,7 @@ export const TestimonialsInstagram: React.FC = () => {
                 <p className="text-xs text-gray-500">{TESTIMONIALS[currentTestimonial].projectType} • {TESTIMONIALS[currentTestimonial].city}</p>
               </div>
               
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <button
                   onClick={() => setCurrentTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
                   className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
@@ -81,7 +81,7 @@ export const TestimonialsInstagram: React.FC = () => {
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
 
