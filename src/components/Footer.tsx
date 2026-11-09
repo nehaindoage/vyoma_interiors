@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, Globe, QrCode, Shield } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import Logo from "@/public/assets/aistudio/vyoma_light.png"
 
 interface FooterProps {
   onOpenPrivacy: () => void;
@@ -26,17 +27,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onDiscussProjectC
         {/* Main Footer Card / Hub */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 border border-white/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
           <div className="lg:col-span-8 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-[#07745D] font-editorial font-bold text-2xl shadow">
-                V
-              </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <img
+                src={Logo}
+                alt="Vyoma Interiors"
+                className="h-14 sm:h-16 w-auto object-cover rounded-xl"
+              />
               <div>
-                <h3 className="font-editorial text-3xl font-bold">Let's discuss your space.</h3>
-                <p className="text-xs text-white/80 tracking-wide">Patna, Bihar • Project enquiries across India</p>
+                <h3 className="font-editorial text-2xl sm:text-3xl font-bold">Let's discuss your space.</h3>
+                <p className="text-xs text-white/80 tracking-wide mt-0.5">
+                  Studio Address: Boring Road Crossing, Patna, Bihar — 800001
+                </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <a href="tel:+917992379168" className="flex items-center gap-2.5 text-sm font-medium hover:text-[#B88917] transition-colors">
                 <Phone className="w-4 h-4 text-[#B88917]" /> +91 79923 79168
               </a>

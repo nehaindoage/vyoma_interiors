@@ -233,7 +233,8 @@ export const TESTIMONIALS = [
     client: 'Rajesh & Sunita Sinha',
     city: 'Patna',
     projectType: 'Apartment 3BHK',
-    source: 'Verified Homeowner'
+    source: 'Verified Homeowner',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80'
   },
   {
     id: 2,
@@ -241,7 +242,17 @@ export const TESTIMONIALS = [
     client: 'Ar. Manish Kumar',
     city: 'Patna',
     projectType: 'Independent Floor Project',
-    source: 'Professional Partner'
+    source: 'Professional Partner',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80'
+  },
+  {
+    id: 3,
+    quote: 'The attention to detail in our villa false ceilings and custom woodwork was phenomenal. Their milestone-based progress kept us fully informed every step of the way.',
+    client: 'Priya Sharma',
+    city: 'Patna',
+    projectType: 'Villa Finishing',
+    source: 'Verified Homeowner',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80'
   }
 ];
 

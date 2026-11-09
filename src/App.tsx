@@ -22,6 +22,7 @@ import { ServiceModal } from './components/ServiceModal';
 import { PrivacyModal } from './components/PrivacyModal';
 import { ServiceItem } from './data';
 import { WhatsAppIcon } from './components/WhatsAppIcon';
+import { InitialPopup } from './components/InitialPopup';
 
 export default function App() {
   const [activeServiceModal, setActiveServiceModal] = useState<ServiceItem | null>(null);
@@ -138,7 +139,9 @@ export default function App() {
         </button>
       </div>
 
-      {/* Modals */}
+      {/* Modals & Initial Popup */}
+      <InitialPopup onSuccess={scrollToEnquiry} />
+
       <ServiceModal
         service={activeServiceModal}
         onClose={() => setActiveServiceModal(null)}

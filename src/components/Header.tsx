@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ChevronRight } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
+import logoDark from "@/public/assets/aistudio/vyomadark.png"
 
 interface HeaderProps {
   onDiscussProjectClick: () => void;
@@ -45,17 +46,13 @@ export const Header: React.FC<HeaderProps> = ({ onDiscussProjectClick }) => {
         <div className="flex items-center justify-between">
           {/* Logo & City Context */}
           <div className="flex items-center gap-3">
-            <a href="#" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 bg-[#07745D] rounded-lg flex items-center justify-center text-white font-editorial font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-                V
-              </div>
-              <div className="flex flex-col">
-                <span className="font-editorial text-xl sm:text-2xl font-bold tracking-tight text-[#121212] leading-none">
-                  VYOMA
-                </span>
-                <span className="text-[10px] tracking-[0.25em] text-[#07745D] font-semibold uppercase mt-0.5">
-                  Interiors • Patna
-                </span>
+            <a href="#" className="flex items-center gap-2 group">
+              <div className=" shadow-sm">
+                <img
+                  src={logoDark}
+                  alt="Vyoma Interiors"
+                  className="h-9 sm:h-10 w-auto object-cover rounded-lg "
+                />
               </div>
             </a>
           </div>

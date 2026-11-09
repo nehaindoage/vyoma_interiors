@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TESTIMONIALS } from '../data';
-import { Quote, Instagram, ChevronLeft, ChevronRight, CheckCircle, ExternalLink } from 'lucide-react';
+import { Quote, Instagram, ExternalLink } from 'lucide-react';
 
 export const TestimonialsInstagram: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const instagramPosts = [
     {
@@ -50,7 +57,7 @@ export const TestimonialsInstagram: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left: Testimonial Carousel */}
-          <div className="lg:col-span-6 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between relative min-h-[320px]">
+          <div className="lg:col-span-6 bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 shadow-sm flex flex-col justify-between relative min-h-[340px]">
             <div>
               <div className="text-[#07745D] mb-4">
                 <Quote className="w-10 h-10 opacity-60" />
@@ -60,28 +67,30 @@ export const TestimonialsInstagram: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex items-center justify-between pt-6 border-t border-gray-100">
-              <div>
-                <h4 className="font-bold text-sm text-[#121212]">{TESTIMONIALS[currentTestimonial].client}</h4>
-                <p className="text-xs text-gray-500">{TESTIMONIALS[currentTestimonial].projectType} • {TESTIMONIALS[currentTestimonial].city}</p>
+            <div className="space-y-4 pt-6 border-t border-gray-100">
+              <div className="flex items-center gap-3">
+                <img
+                  src={TESTIMONIALS[currentTestimonial].image}
+                  alt={TESTIMONIALS[currentTestimonial].client}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-[#07745D]/20 shadow-sm"
+                />
+                <div>
+                  <h4 className="font-bold text-sm text-[#121212]">{TESTIMONIALS[currentTestimonial].client}</h4>
+                  <p className="text-xs text-gray-500">{TESTIMONIALS[currentTestimonial].projectType} • {TESTIMONIALS[currentTestimonial].city}</p>
+                </div>
               </div>
-              
-              {/* <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setCurrentTestimonial((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
-                  aria-label="Previous testimonial"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length)}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 transition-colors"
-                  aria-label="Next testimonial"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div> */}
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center gap-1.5 pt-2">
+                {TESTIMONIALS.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentTestimonial(idx)}
+                    className={`h-1.5 rounded-full transition-all ${idx === currentTestimonial ? 'w-6 bg-[#07745D]' : 'w-1.5 bg-gray-300'}`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
