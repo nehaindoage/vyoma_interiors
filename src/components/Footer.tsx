@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onDiscussProjectC
               <img
                 src={Logo}
                 alt="Vyoma Interiors"
-                className="h-14 sm:h-16 w-auto object-cover rounded-xl"
+                className="h-14 sm:h-16 w-auto object-contain rounded-xl"
               />
               <div>
                 <h3 className="font-editorial text-2xl sm:text-3xl font-bold">Let's discuss your space.</h3>
