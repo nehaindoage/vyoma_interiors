@@ -101,7 +101,7 @@ export const TestimonialsInstagram: React.FC = () => {
                 <Instagram className="w-5 h-5 text-[#07745D]" /> From Instagram (@vyomainteriors)
               </h3>
               <a
-                href="instagram.com/vyomainteriors"
+                href="https://www.instagram.com/vyomainteriors"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-semibold text-[#07745D] hover:underline flex items-center gap-1"
