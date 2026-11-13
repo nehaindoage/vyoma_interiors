@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onDiscussProjectC
               <div>
                 <h3 className="font-editorial text-2xl sm:text-3xl font-bold">Let's discuss your space.</h3>
                 <p className="text-xs text-white/80 tracking-wide mt-0.5">
-                  Studio Address: Boring Road Crossing, Patna, Bihar — 800001
+                  Studio Address: Mateshwari Kutir Apartment S.K. Puram Lane Road, Patna, 801503
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onDiscussProjectC
           </div>
 
           <div className="text-center md:text-right">
-            <p>© {new Date().getFullYear()} Vyoma Interiors. All rights reserved.</p>
+            <p>© {new Date().getFullYear()}  | All rights reserved | Innovatively Designed and Built by Social Mukul Media </p>
             <p className="text-[10px] text-white/60 mt-0.5">Interior finishing studio based in Patna, Bihar.</p>
           </div>
         </div>
